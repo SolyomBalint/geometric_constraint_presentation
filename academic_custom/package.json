@@ -1,0 +1,25 @@
+{
+  "name": "slidev-theme-academic-custom",
+  "version": "1.0.0",
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "academic",
+    "presentation"
+  ],
+  "engines": {
+    "slidev": ">=0.48.0"
+  },
+  "description": "Custom academic theme for Slidev presentations with professional intro layout",
+  "author": "Balint Solyom",
+  "license": "MIT",
+  "slidev": {
+    "colorSchema": "both",
+    "highlighter": "shiki",
+    "styles": "./styles/index.css",
+    "defaults": {
+      "layout": "default",
+      "highlighter": "shiki"
+    }
+  }
+}

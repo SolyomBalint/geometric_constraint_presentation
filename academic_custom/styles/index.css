@@ -1,0 +1,82 @@
+/* Academic Custom Theme Styles */
+
+/* Color Variables */
+:root {
+  /* Primary accent - Purple */
+  --color-primary: #c179fb;
+  --color-primary-light: #d99dfc;
+  --color-primary-dark: #a855f7;
+
+  /* Secondary accent - Blue */
+  --color-secondary-light: #60a5fa;
+  --color-secondary-dark: #1e40af;
+
+  /* Light mode colors */
+  --color-bg-light: #ffffff;
+  --color-bg-light-alt: #f3f4f6;
+  --color-text-light: #111827;
+  --color-text-light-secondary: #4b5563;
+
+  /* Dark mode colors */
+  --color-bg-dark: #1a1a1a;
+  --color-bg-dark-alt: #444444;
+  --color-text-dark: #ffffff;
+  --color-text-dark-secondary: #e5e7eb;
+
+  /* Active theme colors (default to light mode) */
+  --color-bg-main: var(--color-bg-light);
+  --color-bg-alt: var(--color-bg-light-alt);
+  --color-text-main: var(--color-text-light);
+  --color-text-secondary: var(--color-text-light-secondary);
+}
+
+/* Dark mode */
+html.dark {
+  --color-bg-main: var(--color-bg-dark);
+  --color-bg-alt: var(--color-bg-dark-alt);
+  --color-text-main: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-dark-secondary);
+}
+
+/* Global base styles */
+.slidev-layout {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-main);
+}
+
+/* Accent elements */
+.accent-line,
+.separator-line {
+  background-color: var(--color-primary);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Code blocks */
+code {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-main);
+}
+
+/* Transitions */
+.slidev-vclick-target {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  transform: scale(0.95);
+}

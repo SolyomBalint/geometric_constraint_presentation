@@ -1,0 +1,16 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@slidev/cli": "latest",
+    "@slidev/theme-seriph": "latest",
+    "@slidev/theme-apple-basic": "latest",
+    "slidev-theme-neversink": "latest",
+    "slidev-theme-hep": "latest",
+    "slidev-addon-typst": "latest",
+    "slidev-addon-fancy-arrow": "latest",
+    "slidev-addon-tldraw": "latest",
+    "slidev-addon-excalidraw": "latest"
+  }
+}
