@@ -27,7 +27,7 @@ addons:
 ---
 
 <!--
-Notes
+Udozlok mindenkit a 2D-s geometriai kenszer megoldokrol szolo eloadasomon! En Solyom Balint vagyok, jelenleg a BME-n Mernokinformatikus MSc hallgato viz. inf. specen. Az elmult feleves munkamat Dr.Vaitkus Marton felugyulte es segitette. Kezdjunk is bele!
 -->
 
 ---
@@ -43,6 +43,15 @@ tocItems:
   - Technical Aspects/Architecture
   - Conclusion
 ---
+
+<!--
+Az eloadas soran/tematikaja szerint eloszor bemutatom a tema fontossagat es alapjat
+
+Ezt koveti majd egy hasznos adatstruktura bemutatasa ami segit megoldani a felmerulo kihivasokat
+
+Ezt kovetone atterunk konkret algoritmusra ami demozva is lesz. 
+Vegul pedig az elkszult szoftver fontosabb aspektusairol lesz szo roviden.
+-->
 
 ---
 layout: title-page
@@ -83,7 +92,11 @@ images:
 </div>
 
 <!--
-Notes
+Minden bonyolult terv egy egszeru rajzzal kezdodik
+mar itt hibakat keresunk, a geometriai kapcsoaltok alapjan
+Altalanos geoemtriai nezetet hozunk letre az elemekrol es kapcsolataikorl
+
+a dian lathato egy FOTENGELY es annak geometriai repreznetacioja
 -->
 
 ---
@@ -135,6 +148,12 @@ $
 ```
 
 </div>
+
+<!--
+Naiv megoldas: felirunk mindent
+
+Helyette: Newton-raphson: gyokot keres 0-ban, negyzetesen konvergal, polinomialis marad, de be lassul nagyon, nem jo
+-->
 
 ---
 layout: title-page
@@ -197,6 +216,15 @@ A new data structure that stores the relationships of the system:
 </div>
 </div>
 
+<!--
+A kenyszer grafok egy hasznos adat struktura ami eltarolja a geometriai elemeket es azok kapcsolatiat megorizve  a tarolt rendszer tulajdonsagait.
+
+csucsok: elemek
+elek: kenyszerek
+
+Abran a FOTENGELY kenyszer grafja
+-->
+
 ---
 layout: two-cols
 title: Constraint Graph Properties
@@ -241,6 +269,16 @@ There are different types of constraint graphs:
     <img src="./svgs/well_constraint.svg" style="width: 130px; height: 130px;" class="center">
 </div>
 </div>
+
+<!--
+Hasznos tulajdonsagia a kenyszer grafokank segitenek felismerni a rendszer hibait es jellemzoit:
+
+Alul-definialt
+
+Tul definial
+
+jol definialt
+-->
 
 ---
 layout: title-page
@@ -291,6 +329,12 @@ cases(
 $
 ```
 </div>
+
+<!--
+Mivel a kenyszer graf rendelkezik minden szamunkra szukseges strukturalis informacioval annak reszelemeinek megoldasa az egesz megoldasahoz segitenek, igy probalunk grafot dekompozalni
+
+Jellemzoen haromszogekre, ezek a legkisebb elemek, itt lathato hogy mar joval egyszerubb egyenlet rendszert kell megoldnai
+-->
 
 ---
 layout: two-cols
@@ -369,7 +413,15 @@ Owen's top-down algorithm decomposes the constraint graph into triangles:
 <!--       </div> -->
 <!--     </div> -->
 <!--   </div> -->
-<!-- </div> -->
+
+<!--
+Az irodalomban az egyik klasszikus megkozeleitis az Owen top-down algoritmusa
+
+Biconnected bemeneti graf (nincs cut vertex)
+Szeparalo parok keresese.
+
+Virtualis elek beiilesztes szikseg szerint (ha alul kenyszerezett lenne az egyik kieso graf)
+-->
 
 ---
 layout: title-page
@@ -378,12 +430,20 @@ background: ./pictures/engine_background.jpg
 backgroundMode: cover
 ---
 
+<!--
+Demo
+-->
+
 ---
 layout: title-page
 title: Technical Aspects
 background: ./pictures/engine_background.jpg
 backgroundMode: cover
 ---
+
+<!--
+Technikai elemek, szoftver archikteura es tech stack, mik lettek implementalva, ami a demobol latdodtak
+-->
 
 ---
 layout: default
@@ -398,6 +458,17 @@ title: Pipeline
 <div style="display: flex; justify-content: center; margin-top: 0.1rem;">
   <img src="./svgs/gcs_pipeline.drawio.svg" style="width: 500px; height: auto; display: block; margin: 0 auto;">
 </div>
+
+<!--
+Kepen az implementacio pipelineja lathato, 
+
+Detector
+Resolver
+Decomposer
+Solver
+
+Ezek run-time cserelhetok
+-->
 
 ---
 layout: default
@@ -435,3 +506,9 @@ moment)
 
 </div>
 </div>
+
+<!--
+Tech stack, nix fasza dolog, compile time graf
+
+Implementalt algok
+-->
