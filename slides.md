@@ -2,7 +2,7 @@
 # try also 'default' to start simple
 theme: ./academic_custom
 layout: intro
-background: ./pictures/engine_background.jpg
+background: /pictures/engine_background.jpg
 backgroundOpacity: 0.75
 textColor: "#ffffff"
 occasion: Shapr3D Scolarship/MSc Project Laboratory
@@ -13,9 +13,9 @@ coAuthors:
   - Dr. Vaitkus Márton
 date: 2025.10.14
 logos:
-  - ./pictures/BME LOGO_2025_horizontal_black.png
-  - ./pictures/VIK_LOGO_2025_horizontal_black_eng.png
-  - ./pictures/iit_logo.png
+  - /pictures/BME LOGO_2025_horizontal_black.png
+  - /pictures/VIK_LOGO_2025_horizontal_black_eng.png
+  - /pictures/iit_logo.png
 # Footer configuration (applied to all slides)
 footerTitle: 2D Geometric Constraint Solvers
 footerOccasion: Shapr3D Scolarship/MSc Project Laboratory
@@ -34,7 +34,7 @@ Udozlok mindenkit a 2D-s geometriai kenszer megoldokrol szolo eloadasomon! En So
 ---
 layout: toc
 tocTitle: Agenda
-background: ./pictures/engine_background.jpg
+background: /pictures/engine_background.jpg
 backgroundOpacity: 0.7
 tocItems:
   - Introduction
@@ -57,7 +57,7 @@ Vegul pedig az elkszult szoftver fontosabb aspektusairol lesz szo roviden.
 ---
 layout: title-page
 title: Introduction
-background: ./pictures/engine_background.jpg
+background: /pictures/engine_background.jpg
 backgroundMode: fit
 ---
 
@@ -66,8 +66,8 @@ layout: image-right
 title: Motivation
 imageLayout: horizontal
 images:
-  - ./pictures/crankshaft.png
-  - ./pictures/crankshaft_model.png
+  - /pictures/crankshaft.png
+  - /pictures/crankshaft_model.png
 ---
 
 <style>
@@ -159,7 +159,7 @@ Helyette: Newton-raphson: gyokot keres 0-ban, negyzetesen konvergal, polinomiali
 ---
 layout: title-page
 title: Constraint Graphs
-background: ./pictures/engine_background.jpg
+background: /pictures/engine_background.jpg
 backgroundMode: cover
 ---
 
@@ -195,7 +195,7 @@ A new data structure that stores the relationships of the system:
 ::right::
 
 <div v-click="1">
-<img src="./pictures/crankshaft_model.png" style="width: 200px; height: 200px;" class="center">
+<img src="/pictures/crankshaft_model.png" style="width: 200px; height: 200px;" class="center">
 </div>
 
 <style>
@@ -213,7 +213,7 @@ A new data structure that stores the relationships of the system:
 
 <div v-click="3">
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    <img src="./svgs/crank.excalidraw.svg" style="width: 210px; height: 210px;" class="center">
+    <img src="/svgs/crank.excalidraw.svg" style="width: 210px; height: 210px;" class="center">
 </div>
 </div>
 
@@ -255,19 +255,19 @@ There are different types of constraint graphs:
 
 <div v-click="1">
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    <img src="./svgs/under_constraint.svg" style="width: 130px; height: 130px;" class="center">
+    <img src="/svgs/under_constraint.svg" style="width: 130px; height: 130px;" class="center">
 </div>
 </div>
 
 <div v-click="2">
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    <img src="./svgs/over_constraint.svg" style="width: 130px; height: 130px;" class="center">
+    <img src="/svgs/over_constraint.svg" style="width: 130px; height: 130px;" class="center">
 </div>
 </div>
 
 <div v-click="3">
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    <img src="./svgs/well_constraint.svg" style="width: 130px; height: 130px;" class="center">
+    <img src="/svgs/well_constraint.svg" style="width: 130px; height: 130px;" class="center">
 </div>
 </div>
 
@@ -284,7 +284,7 @@ jol definialt
 ---
 layout: title-page
 title: Decomposition
-background: ./pictures/engine_background.jpg
+background: /pictures/engine_background.jpg
 backgroundMode: cover
 ---
 
@@ -316,7 +316,7 @@ title: Need for Decomposition
 
 <div v-click="1">
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    <img src="./svgs/triangle.svg" style="width: 280px; height: 280px;" class="center">
+    <img src="/svgs/triangle.svg" style="width: 280px; height: 280px;" class="center">
 </div>
 
 ```typst
@@ -368,21 +368,21 @@ Owen's top-down algorithm decomposes the constraint graph into triangles:
 
 <div style="position: relative; min-height: 400px;">
   <Transition name="fade">
-    <img 
-      v-show="$slidev.nav.clicks === 2" 
-      src="./svgs/crank.excalidraw.svg" 
+    <img
+      v-show="$slidev.nav.clicks === 2"
+      src="/svgs/crank.excalidraw.svg"
       style="position: absolute; width: 400px; height: 400px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
   </Transition>
   <Transition name="fade">
-    <img 
-      v-show="$slidev.nav.clicks === 3" 
-      src="./svgs/crank_half_x.excalidraw.svg" 
+    <img
+      v-show="$slidev.nav.clicks === 3"
+      src="/svgs/crank_half_x.excalidraw.svg"
       style="position: absolute; width: 550px; height: 400px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
   </Transition>
   <Transition name="fade">
-    <img 
-      v-show="$slidev.nav.clicks >= 4" 
-      src="./svgs/crank_full_no_embed.svg" 
+    <img
+      v-show="$slidev.nav.clicks >= 4"
+      src="/svgs/crank_full_no_embed.svg"
       style="position: absolute; width: 550px; height: 400px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
   </Transition>
 </div>
@@ -396,25 +396,6 @@ Owen's top-down algorithm decomposes the constraint graph into triangles:
 }
 </style>
 
-<!-- <div class="overlap-wrapper"> -->
-<!--   <div style="position: relative; min-height: 400px;"> -->
-<!--     <div v-click.hide="1" style="position: absolute; top: 0; left: 0; width: 100%;"> -->
-<!--       <div style="display: flex; justify-content: center; align-items: center;"> -->
-<!--         <img src="./svgs/crank.excalidraw.svg" style="width: 400px; height: 400px;" class="center"> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--     <div v-click="1" v-click.hide="2" style="position: absolute; top: 0; left: 0; width: 100%;"> -->
-<!--       <div style="display: flex; justify-content: center; align-items: center;"> -->
-<!--         <img src="./svgs/crank_half_x.excalidraw.svg" style="width: 550px; height: 400px;" class="center"> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--     <div v-click="2" style="position: absolute; top: 0; left: 0; width: 100%;"> -->
-<!--       <div style="display: flex; justify-content: center; align-items: center;"> -->
-<!--         <img src="./svgs/crank_full_no_embed.svg" style="width: 550px; height: 400px;" class="center"> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--   </div> -->
-
 <!--
 Az irodalomban az egyik klasszikus megkozeleitis az Owen top-down algoritmusa
 
@@ -427,7 +408,7 @@ Virtualis elek beiilesztes szikseg szerint (ha alul kenyszerezett lenne az egyik
 ---
 layout: title-page
 title: Demo
-background: ./pictures/engine_background.jpg
+background: /pictures/engine_background.jpg
 backgroundMode: cover
 ---
 
@@ -438,7 +419,7 @@ Demo
 ---
 layout: title-page
 title: Technical Aspects
-background: ./pictures/engine_background.jpg
+background: /pictures/engine_background.jpg
 backgroundMode: cover
 ---
 
@@ -457,7 +438,7 @@ title: Pipeline
 * **Solver**: Solves the subgraphs and reconstructs the original system 
 
 <div style="display: flex; justify-content: center; margin-top: 0.1rem;">
-  <img src="./svgs/gcs_pipeline.drawio.svg" style="width: 500px; height: auto; display: block; margin: 0 auto;">
+  <img src="/svgs/gcs_pipeline.drawio.svg" style="width: 500px; height: auto; display: block; margin: 0 auto;">
 </div>
 
 <!--

@@ -4,7 +4,7 @@
     <div
       v-if="$slidev.nav.currentLayout === 'intro' && $frontmatter.background"
       class="absolute inset-0 z-0"
-      :style="{ backgroundImage: `url(${$frontmatter.background})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+      :style="{ backgroundImage: `url(${withBase($frontmatter.background)})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
     />
     <div v-else class="absolute inset-0 z-0 bg-gradient-to-br from-blue-900 to-blue-700" />
 
@@ -95,7 +95,7 @@
           class="logo-container"
         >
           <img
-            :src="logo"
+            :src="withBase(logo)"
             :alt="`Logo ${index + 1}`"
             class="h-16 w-auto object-contain filter drop-shadow-lg"
           />
@@ -104,6 +104,17 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+// Helper function to prepend base URL to paths
+const withBase = (path: string) => {
+  if (!path) return path
+  const base = import.meta.env.BASE_URL
+  // Remove leading slash from path to avoid double slashes
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path
+  return base + normalizedPath
+}
+</script>
 
 <style scoped>
 .intro-layout {

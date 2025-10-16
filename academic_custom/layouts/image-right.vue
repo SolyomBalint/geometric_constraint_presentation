@@ -24,7 +24,7 @@
           class="image-wrapper"
         >
           <img
-            :src="image"
+            :src="withBase(image)"
             :alt="`Image ${index + 1}`"
             class="rounded-lg shadow-lg w-full h-auto object-contain"
           />
@@ -36,6 +36,15 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+// Helper function to prepend base URL to paths
+const withBase = (path: string) => {
+  if (!path) return path
+  const base = import.meta.env.BASE_URL
+  // Remove leading slash from path to avoid double slashes
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path
+  return base + normalizedPath
+}
 
 const images = computed(() => {
   const imgs = $frontmatter.images

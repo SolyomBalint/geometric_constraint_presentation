@@ -5,7 +5,7 @@
       class="right-section bg-gray-200 dark:bg-gray-800"
       :class="{ 'right-section-fit': $frontmatter.backgroundMode === 'fit' }"
       :style="{
-        backgroundImage: $frontmatter.background ? `url(${$frontmatter.background})` : 'none',
+        backgroundImage: $frontmatter.background ? `url(${withBase($frontmatter.background)})` : 'none',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -55,6 +55,17 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+// Helper function to prepend base URL to paths
+const withBase = (path: string) => {
+  if (!path) return path
+  const base = import.meta.env.BASE_URL
+  // Remove leading slash from path to avoid double slashes
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path
+  return base + normalizedPath
+}
+</script>
 
 <style scoped>
 .toc-layout {
