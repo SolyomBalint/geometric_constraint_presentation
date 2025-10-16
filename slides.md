@@ -24,6 +24,7 @@ addons:
   - slidev-addon-excalidraw
   - fancy-arrow
   - tldraw
+  - slidev-component-scroll
 ---
 
 <!--

@@ -11,6 +11,7 @@
     "slidev-addon-typst": "latest",
     "slidev-addon-fancy-arrow": "latest",
     "slidev-addon-tldraw": "latest",
-    "slidev-addon-excalidraw": "latest"
+    "slidev-addon-excalidraw": "latest",
+    "slidev-component-scroll": "latest"
   }
 }
